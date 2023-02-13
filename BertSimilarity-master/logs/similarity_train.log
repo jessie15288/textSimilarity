@@ -1,0 +1,36 @@
+WARNING:tensorflow:From /Users/jyang/Documents/code/python/text_similarity/BertSimilarity-master/args.py:4: The name tf.logging.set_verbosity is deprecated. Please use tf.compat.v1.logging.set_verbosity instead.
+
+WARNING:tensorflow:From /Users/jyang/Documents/code/python/text_similarity/BertSimilarity-master/args.py:4: The name tf.logging.INFO is deprecated. Please use tf.compat.v1.logging.INFO instead.
+
+WARNING:tensorflow:From /Users/jyang/Documents/code/python/text_similarity/BertSimilarity-master/optimization.py:84: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+/Users/jyang/miniconda3/envs/tf1/lib/python3.6/site-packages/absl/flags/_validators.py:206: UserWarning: Flag --mode has a non-None default value; therefore, mark_flag_as_required will pass even if flag is not specified in the command line!
+  'command line!' % flag_name)
+WARNING:tensorflow:From similarity.py:703: The name tf.app.run is deprecated. Please use tf.compat.v1.app.run instead.
+
+WARNING:tensorflow:From /Users/jyang/Documents/code/python/text_similarity/BertSimilarity-master/tokenization.py:74: The name tf.gfile.GFile is deprecated. Please use tf.io.gfile.GFile instead.
+
+W0209 17:39:21.183337 140735858008960 module_wrapper.py:139] From /Users/jyang/Documents/code/python/text_similarity/BertSimilarity-master/tokenization.py:74: The name tf.gfile.GFile is deprecated. Please use tf.io.gfile.GFile instead.
+
+WARNING:tensorflow:From similarity.py:78: The name tf.gfile.Open is deprecated. Please use tf.io.gfile.GFile instead.
+
+W0209 17:39:21.258285 140735858008960 module_wrapper.py:139] From similarity.py:78: The name tf.gfile.Open is deprecated. Please use tf.io.gfile.GFile instead.
+
+Traceback (most recent call last):
+  File "similarity.py", line 703, in <module>
+    tf.app.run()
+  File "/Users/jyang/miniconda3/envs/tf1/lib/python3.6/site-packages/tensorflow_core/python/platform/app.py", line 40, in run
+    _run(main=main, argv=argv, flags_parser=_parse_flags_tolerate_undef)
+  File "/Users/jyang/miniconda3/envs/tf1/lib/python3.6/site-packages/absl/app.py", line 312, in run
+    _run_main(main, args)
+  File "/Users/jyang/miniconda3/envs/tf1/lib/python3.6/site-packages/absl/app.py", line 258, in _run_main
+    sys.exit(main(argv))
+  File "similarity.py", line 687, in main
+    sim.set_mode(tf.estimator.ModeKeys.TRAIN)
+  File "similarity.py", line 142, in set_mode
+    self.estimator = self.get_estimator()
+  File "similarity.py", line 280, in get_estimator
+    train_examples = self.processor.get_train_examples(args.dataset_path)
+  File "similarity.py", line 91, in get_train_examples
+    text_a = tokenization.convert_to_unicode(train[0])
+TypeError: 'InputExample' object does not support indexing
